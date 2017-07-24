@@ -1386,6 +1386,10 @@ namespace Npgsql
         /// The server is an Amazon Redshift instance.
         /// </summary>
         Redshift,
+        /// <summary>
+        /// The server is a CrateDB instance.
+        /// </summary>
+        CrateDB
     }
 
     /// <summary>
