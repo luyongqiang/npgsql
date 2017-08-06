@@ -39,7 +39,6 @@ using Npgsql.Logging;
 using Npgsql.NameTranslation;
 using Npgsql.TypeMapping;
 using NpgsqlTypes;
-using Npgsql.Compatibility.CrateDB;
 using IsolationLevel = System.Data.IsolationLevel;
 using ThreadState = System.Threading.ThreadState;
 
@@ -271,10 +270,6 @@ namespace Npgsql
                         mapper.Reset();
                     }
                 }
-
-                // Adapt mappings for certain PostgreSQL-like databases (like CrateDB).
-                if (Connector.IsCrateDB)
-                    Connector.TypeMapper.UseCrateDB();
 
 #if !NETSTANDARD1_3
                 // We may have gotten an already enlisted pending connector above, no need to enlist in that case
