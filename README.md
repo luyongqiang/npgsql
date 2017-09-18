@@ -9,6 +9,11 @@ We are working to get these changes merged upstream.
 
 It is important to understand, that although CrateDB [contains support for the PostgreSQL wire protocol](https://crate.io/docs/crate/reference/protocols/postgres.html), it is not a PostgreSQL clone and therefore it only supports a subset of PostgreSQLs features and data types.
 
+### Installation
+
+The recommended way to use the CrateDB Npgsql Plugin is to install its [NuGet Package](https://www.nuget.org/packages/Npgsql.CrateDB/).
+For general information please check the [Getting Started](http://www.npgsql.org/doc/index.html) page.
+
 ### Server Compatibility Mode
 
 The adaptions that are necessary to use Npgsql to connect and interact with CrateDB are activated by setting the `Server Compatibility Mode` to *CrateDB* in the connection string.
